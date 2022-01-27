@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MainPageAppTemplate.Views.MainPage"
+             xmlns:vm="clr-namespace:MainPageAppTemplate.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.4*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="xamarin_logo.png" BackgroundColor="{StaticResource Accent}" />
+        <Editor Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Enter note" Text="{Binding TheNote, Mode=TwoWay}" />
+
+        <Button Grid.Row="2" Grid.Column="0" x:Name="SaveBTN" BackgroundColor="Green" Text="Save" Command="{Binding SaveCommand}" Margin="10,0,10,0"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="DeleteBTN" BackgroundColor="Red" Text="Delete" Command="{Binding DeleteCommand}"  Margin="10,0,10,0"/>
+
+        <CollectionView ItemsSource="{Binding AllNotes, Mode=OneWay}" Grid.Row="3" Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame>
+                            <Label Text="{Binding .}" FontSize="Large"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
