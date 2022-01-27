@@ -1,10 +1,10 @@
-﻿using MainPageAppTemplate.Services;
-using MainPageAppTemplate.Views;
+﻿using NoteTakingApp.Services;
+using NoteTakingApp.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MainPageAppTemplate
+namespace NoteTakingApp
 {
     public partial class App : Application
     {
@@ -14,7 +14,7 @@ namespace MainPageAppTemplate
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());   // Serving MainPage as root page for navigation page
         }
 
         protected override void OnStart()

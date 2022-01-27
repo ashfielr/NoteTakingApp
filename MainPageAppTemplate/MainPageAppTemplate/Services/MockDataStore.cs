@@ -1,10 +1,10 @@
-﻿using MainPageAppTemplate.Models;
+﻿using NoteTakingApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MainPageAppTemplate.Services
+namespace NoteTakingApp.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

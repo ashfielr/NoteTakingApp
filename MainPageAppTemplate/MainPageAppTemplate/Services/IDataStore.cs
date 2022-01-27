@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MainPageAppTemplate.Services
+namespace NoteTakingApp.Services
 {
     public interface IDataStore<T>
     {

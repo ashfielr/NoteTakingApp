@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainPageAppTemplate.Models
+namespace NoteTakingApp.Models
 {
     public class Item
     {

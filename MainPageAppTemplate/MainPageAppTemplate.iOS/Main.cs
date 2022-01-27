@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace MainPageAppTemplate.iOS
+namespace NoteTakingApp.iOS
 {
     public class Application
     {

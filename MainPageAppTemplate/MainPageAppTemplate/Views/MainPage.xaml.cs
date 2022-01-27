@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MainPageAppTemplate.Views
+namespace NoteTakingApp.Views
 {
     public partial class MainPage : ContentPage
     {
